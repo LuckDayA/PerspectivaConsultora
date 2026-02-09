@@ -8,7 +8,7 @@
       <ul>
         <li><a href="#about">Nosotros</a></li>
         <li><a href="#services">Servicios</a></li>
-        <li><a href="https://wa.me/+51980770179" class="whatsapp-link" target="_blank" rel="noopener">Contacto</a></li>
+        <li><a href="#contact">Contacto</a></li>
       </ul>
     </nav>
   </div>
@@ -51,5 +51,29 @@
     var y = new Date().getFullYear();
     var el = document.getElementById('year');
     if(el) el.textContent = y;
+  })();
+
+  // Abrir WhatsApp en nueva pestaña/top cuando se presionen botones (evita bloqueo en el editor)
+  (function(){
+    var openWhatsApp = function(url){
+      try{
+        if(window.top && window.top !== window){
+          window.top.open(url, '_blank');
+        } else {
+          window.open(url, '_blank');
+        }
+      } catch(e){
+        window.open(url, '_blank');
+      }
+    };
+    document.addEventListener('click', function(e){
+      var t = e.target.closest && e.target.closest('.whatsapp-btn, .whatsapp-link');
+      if(t){
+        e.preventDefault();
+        var url = t.getAttribute('href') || t.dataset.href;
+        if(!url) url = 'https://wa.me/+51980770179';
+        openWhatsApp(url);
+      }
+    });
   })();
 </script>
