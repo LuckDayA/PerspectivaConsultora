@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia de Marketing y Publicidad | Asesoría Digital</title>
+    <link rel="stylesheet" href="DISEÑO.CSS">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="#top" class="brand-link">
+                <img src="logo.png" alt="Perspectiva — Consultora de Comunicación" class="logo">
+            </a>
+            <nav class="main-nav" aria-label="Menú principal">
+                <ul>
+                    <li><a href="#about">Nosotros</a></li>
+                    <li><a href="#services">Servicios</a></li>
+                    <li><a href="https://wa.me/+51980770179" class="whatsapp-link" target="_blank" rel="noopener">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container" id="top">
+    
+    <section id="about" class="about">
+    <h2>Sobre perspectiva</h2>
+    <p>En Perspectiva, somos una agencia de marketing y publicidad especializada en estrategias digitales innovadoras. Ayudamos a tu negocio a crecer y conectar con tu audiencia de manera efectiva.</p>
+</section>
+
+<section id="services" class="services">
+    <h2>Nuestros servicios</h2>
+    <ul>
+        <li>Estrategia Digital</li>
+        <li>Diseño Gráfico</li>
+        <li>Gestión de Redes Sociales</li>
+        <li>Publicidad Online</li>
+    </ul>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Listos para crecer</h2>
+    <a href="https://wa.me/+51980770179" class="whatsapp-btn">Contactarnos por WhatsApp</a>
+</section>
+</div>
+</div>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© <span id="year"></span> Perspectiva. Todos los derechos reservados.</p>
+            <div class="footer-right">
+                <p class="legal">Perspectiva — Consultora de Comunicación</p>
+                <p class="legal-links"><a href="privacy.html">Política de privacidad</a> · <a href="terms.html">Términos y condiciones</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Inserta el año actual en el footer
+        (function(){
+            var y = new Date().getFullYear();
+            var el = document.getElementById('year');
+            if(el) el.textContent = y;
+        })();
+    </script>
+</body>
+</html>
