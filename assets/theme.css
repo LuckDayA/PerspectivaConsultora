@@ -142,3 +142,10 @@ a:focus, .whatsapp-btn:focus { outline: 3px solid rgba(37,211,102,0.25); outline
 	.footer-right { align-items: flex-end; }
 	.legal-links { margin: 0; }
 }
+.site-footer a:hover, .site-footer a:focus { text-decoration: underline; color: #fff; }
+.legal-links { margin: 0; font-size: 0.9rem; }
+
+@media (min-width: 900px) {
+	.footer-right { align-items: flex-end; }
+	.legal-links { margin: 0; }
+}
