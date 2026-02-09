@@ -1,16 +1,55 @@
 <!-- Minimal home template for Shopify theme -->
-<main role="main">
-  <section class="hero">
-    <div class="wrap">
-      <h1>{{ shop.name }}</h1>
-      <p>{{ shop.description }}</p>
-    </div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#top" class="brand-link">
+      <img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" class="logo">
+    </a>
+    <nav class="main-nav" aria-label="Menú principal">
+      <ul>
+        <li><a href="#about">Nosotros</a></li>
+        <li><a href="#services">Servicios</a></li>
+        <li><a href="https://wa.me/+51980770179" class="whatsapp-link" target="_blank" rel="noopener">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="container" id="top">
+  <section id="about" class="about">
+    <h2>Sobre perspectiva</h2>
+    <p>En Perspectiva, somos una agencia de marketing y publicidad especializada en estrategias digitales innovadoras. Ayudamos a tu negocio a crecer y conectar con tu audiencia de manera efectiva.</p>
   </section>
 
-  <section class="content">
-    <div class="wrap">
-      <h2>Bienvenido</h2>
-      <p>Este tema incluye un scaffold mínimo. Reemplaza este contenido con tus secciones.</p>
-    </div>
+  <section id="services" class="services">
+    <h2>Nuestros servicios</h2>
+    <ul>
+      <li>Estrategia Digital</li>
+      <li>Diseño Gráfico</li>
+      <li>Gestión de Redes Sociales</li>
+      <li>Publicidad Online</li>
+    </ul>
   </section>
-</main>
+
+  <section id="contact" class="contact">
+    <h2>Listos para crecer</h2>
+    <a href="https://wa.me/+51980770179" class="whatsapp-btn">Contactarnos por WhatsApp</a>
+  </section>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> {{ shop.name }}. Todos los derechos reservados.</p>
+    <div class="footer-right">
+      <p class="legal">{{ shop.name }}</p>
+      <p class="legal-links"><a href="/privacy">Política de privacidad</a> · <a href="/policies/terms-of-service">Términos y condiciones</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var y = new Date().getFullYear();
+    var el = document.getElementById('year');
+    if(el) el.textContent = y;
+  })();
+</script>
